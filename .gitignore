@@ -1,0 +1,23 @@
+# data
+data/*
+!data/README.md
+*.jpeg
+*.jpg
+*.tif
+*.zip
+# large result binaries (attach to a release / Zenodo instead)
+results/**/backbone_*.pt
+results/**/features.npz
+results/**/ext_features_*.npz
+results/**/ext_head_ensembles.pt
+results/**/ibm_run.py
+results/**/v20_*
+# secrets
+.env
+*token*
+access_token
+qiskit-ibm.json
+# python / jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -1,0 +1,22 @@
+dataset,head,NORMAL,DME,DRUSEN,macro,mean_max_prob,CNV
+OCTDL,bottleneck_only,91.59,72.68,37.08,67.12,0.694,
+OCTDL,classical_deep_2,91.68,77.63,39.44,69.58,0.691,
+OCTDL,classical_deep_4,91.7,75.13,37.22,68.02,0.693,
+OCTDL,classical_matched,90.62,75.66,35.2,67.16,0.688,
+OCTDL,hybrid_vqc,91.09,78.28,47.27,72.21,0.603,
+OCTDL,reupload_L3,91.1,69.19,45.01,68.43,0.618,
+OCTDL,reupload_L6,90.4,63.62,40.12,64.71,0.617,
+DUKE,bottleneck_only,87.94,86.75,78.94,84.54,0.747,
+DUKE,classical_deep_2,89.85,86.77,81.73,86.12,0.753,
+DUKE,classical_deep_4,88.8,86.7,81.54,85.68,0.752,
+DUKE,classical_matched,87.04,86.5,77.26,83.6,0.75,
+DUKE,hybrid_vqc,88.69,86.25,78.68,84.54,0.694,
+DUKE,reupload_L3,82.24,86.51,72.12,80.29,0.711,
+DUKE,reupload_L6,82.82,86.76,73.94,81.17,0.714,
+locked_test (Kermany),bottleneck_only,97.8,90.54,72.37,88.73,0.771,94.19
+locked_test (Kermany),classical_deep_2,97.81,90.35,72.88,88.84,0.769,94.32
+locked_test (Kermany),classical_deep_4,97.87,90.07,72.93,88.79,0.771,94.29
+locked_test (Kermany),classical_matched,97.8,90.73,73.41,89.1,0.771,94.47
+locked_test (Kermany),hybrid_vqc,97.95,90.69,72.79,88.9,0.752,94.17
+locked_test (Kermany),reupload_L3,97.62,90.14,71.12,88.22,0.75,94.0
+locked_test (Kermany),reupload_L6,97.7,89.67,71.74,88.31,0.752,94.12

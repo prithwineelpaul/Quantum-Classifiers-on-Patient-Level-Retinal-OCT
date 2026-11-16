@@ -1,0 +1,19 @@
+# Core (notebooks 01 and 02). The exact versions of each reported run are recorded by the last cell of each notebook
+# in environment_01.txt / environment_02.txt in the results folder.
+torch>=2.1
+torchvision
+timm>=0.9
+pennylane>=0.35        # used only to verify the PyTorch circuit simulator and to draw the circuit
+numpy
+scipy
+pandas
+scikit-learn
+matplotlib
+seaborn
+pillow
+jupyter
+
+# IBM hardware section only (installed by notebook 02 when IBM_STEP != 'none'; run in a separate process)
+# qiskit>=1.2
+# qiskit-ibm-runtime>=0.30
+# qiskit-aer

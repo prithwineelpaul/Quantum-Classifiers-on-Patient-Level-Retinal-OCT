@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Code and results for: No Quantum Advantage for Variational and Kernel Quantum Classifiers on Patient-Level Retinal OCT: A Controlled Benchmark with IBM Hardware Validation"
+authors:
+  - family-names: Paul
+    given-names: Prithwineel
+    affiliation: "Institute of Engineering and Management (IEM) / University of Engineering and Management (UEM), Kolkata, India"
+license: MIT
+repository-code: "https://github.com/<user>/oct-qml-benchmark"
+preferred-citation:
+  type: article
+  title: "No Quantum Advantage for Variational and Kernel Quantum Classifiers on Patient-Level Retinal OCT: A Controlled Benchmark with IBM Hardware Validation"
+  authors:
+    - family-names: Paul
+      given-names: Prithwineel
+  journal: "Quantum Machine Intelligence"
+  year: 2026
+  notes: "Submitted"

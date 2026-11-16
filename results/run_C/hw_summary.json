@@ -1,0 +1,51 @@
+{
+  "backend": "ibm_kingston",
+  "primitive": "sampler",
+  "logical_cnots": 40,
+  "two_qubit_gates": {
+    "cz": 109
+  },
+  "depth": 85,
+  "depth_2q": 27,
+  "physical_qubits": [
+    16,
+    2,
+    4,
+    1,
+    3,
+    36,
+    21,
+    23,
+    20,
+    22,
+    97,
+    117,
+    106,
+    107,
+    105,
+    46,
+    48,
+    45,
+    57,
+    47
+  ],
+  "median_2q_error": 0.0016027952282073876,
+  "median_readout_error": 0.00811767578125,
+  "n_images": 300,
+  "patients": 164,
+  "shots": 1024,
+  "delta_f1_hw_minus_exact_pp": -0.9701484916877168,
+  "delta_ci_pp": [
+    -2.935955027814742,
+    0.6292424421912954
+  ],
+  "mcnemar_clustered": {
+    "hw_only_correct": 2,
+    "exact_only_correct": 5,
+    "p": 0.2568392579578533
+  },
+  "p_boot": 0.241,
+  "attenuation_slope": 0.7466564468478298,
+  "pearson_r": 0.9558672833765096,
+  "effective_uniform_depol_p": 0.010006545583083984
+}

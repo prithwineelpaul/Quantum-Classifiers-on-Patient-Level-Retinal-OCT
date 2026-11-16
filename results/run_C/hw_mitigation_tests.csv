@@ -1,0 +1,4 @@
+comparison,delta_f1_pp,ci_lo_pp,ci_hi_pp,first_only_correct,second_only_correct,p_mcnemar,p_mcnemar_clustered,p_boot
+"hardware, mitigated (TREX + gate twirling + DD)  vs  exact simulator",-0.3399593186353522,-1.133288591672294,0.055512749176890225,0,1,1.0,0.31731050786291115,0.452
+"hardware, mitigated (TREX + gate twirling + DD)  vs  hardware, unmitigated (DD only)",0.6301891730523645,-0.8770642617076034,2.4937977362821098,4,2,0.6875,0.4142161782425251,0.424
+"hardware, unmitigated (DD only)  vs  exact simulator",-0.9701484916877168,-2.935955027814742,0.6292424421912954,2,5,0.453125,0.2568392579578533,0.241

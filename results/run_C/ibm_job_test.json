@@ -1,0 +1,11 @@
+{
+  "job_id": "dbdbn6s24mrc73cl5ttg",
+  "mode": "test",
+  "primitive": "sampler",
+  "shots": 256,
+  "n": 20,
+  "backend": "ibm_kingston",
+  "settings": {
+    "dynamical_decoupling": true
+  }
+}

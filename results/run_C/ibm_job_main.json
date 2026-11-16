@@ -1,0 +1,7 @@
+{
+  "job_id": "dbc2fds24mrc73cilusg",
+  "mode": "main",
+  "shots": 1024,
+  "n": 300,
+  "backend": "ibm_kingston"
+}

@@ -1,0 +1,14 @@
+{
+  "job_id": "dbddkchgv2cc73do7fr0",
+  "mode": "mitigated",
+  "primitive": "estimator",
+  "shots": 1024,
+  "n": 300,
+  "backend": "ibm_kingston",
+  "settings": {
+    "TREX": true,
+    "gate_twirling": true,
+    "dynamical_decoupling": true,
+    "zne": false
+  }
+}

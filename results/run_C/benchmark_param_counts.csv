@@ -1,0 +1,8 @@
+head,trainable_total,middle
+bottleneck_only,10344,0
+classical_deep_4,10824,480
+reupload_L6,10824,480
+classical_deep_2,10584,240
+reupload_L3,10584,240
+classical_matched,10464,120
+hybrid_vqc,10464,120

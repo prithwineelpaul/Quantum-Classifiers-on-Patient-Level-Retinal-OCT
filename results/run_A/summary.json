@@ -1,0 +1,71 @@
+{
+  "locked_hash": "b735ec67e3e4531b",
+  "verdict": "quantum layer underperforms the matched classical block",
+  "cfg": {
+    "backbone": "resnet18d.ra2_in1k",
+    "pretrained": true,
+    "img_size": 224,
+    "locked_test_frac": 0.15,
+    "backbone_frac": 0.5,
+    "bb_val_frac": 0.1,
+    "bb_epochs": 12,
+    "bb_patience": 3,
+    "bb_bs": 64,
+    "bb_lr_head": 0.001,
+    "bb_lr_body": 0.0002,
+    "bb_wd": 0.05,
+    "bb_samples_per_epoch": 40000,
+    "label_smoothing": 0.1,
+    "reuse_backbone": true,
+    "q_circuits": 4,
+    "q_qubits": 5,
+    "q_layers": 2,
+    "q_dropout": 0.1,
+    "n_folds": 5,
+    "head_seeds": [
+      0,
+      1,
+      2
+    ],
+    "head_epochs": 40,
+    "head_bs": 256,
+    "head_lr": 0.003,
+    "head_wd": 0.0001,
+    "head_patience": 6,
+    "head_in_dropout": 0.2,
+    "head_min_steps": 0,
+    "data_eff_per_class": [
+      25,
+      100,
+      400,
+      1600
+    ],
+    "data_eff_min_steps": 800,
+    "img_noise_levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "noise_eval_per_class": 500,
+    "shot_levels": [
+      4096,
+      1024,
+      256,
+      64,
+      16
+    ],
+    "shot_repeats": 5,
+    "depol_levels": [
+      0.0,
+      0.001,
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "n_boot": 2000,
+    "num_workers": 4
+  }
+}

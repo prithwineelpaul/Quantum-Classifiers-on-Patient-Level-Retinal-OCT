@@ -1,0 +1,5 @@
+head,trainable_total,trainable_middle
+bottleneck_only,10344,0
+classical_matched,10464,120
+hybrid_vqc_frozen,10344,0
+hybrid_vqc,10464,120

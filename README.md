@@ -67,7 +67,8 @@ python scripts/verify_split.py /path/to/OCT2017 --manifest results/run_C/split_m
 
 # CV significance tests, from the saved per-fold results
 python scripts/verify_cv_tests.py --results results/run_A     # notebook 01 (run A)
-python scripts/verify_cv_tests.py --results results/run_C     # notebook 02 (run C replication; run_B once added)
+python scripts/verify_cv_tests.py --results results/run_B     # notebook 02 (run B: paper Table 4)
+python scripts/verify_cv_tests.py --results results/run_C     # notebook 02 (run C replication)
 
 # all hardware numbers, from the raw IBM measurement bits (also re-simulates the circuit in plain numpy)
 python scripts/verify_hardware.py --results results/run_C

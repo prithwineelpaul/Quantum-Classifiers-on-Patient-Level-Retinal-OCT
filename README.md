@@ -1,8 +1,8 @@
-# No quantum advantage on patient-level retinal OCT: a controlled benchmark
+# No robust quantum advantage on patient-level retinal OCT: a controlled benchmark
 
 Code and result files for the paper
 
-> **No Quantum Advantage for Variational and Kernel Quantum Classifiers on Patient-Level Retinal OCT: A Controlled Benchmark with IBM Hardware Validation** — Prithwineel Paul *et al.* (submitted to *Quantum Machine Intelligence*).
+> **No Robust Quantum Advantage for Variational and Kernel Quantum Classifiers on Patient-Level Retinal OCT: A Controlled Benchmark with IBM Hardware Validation** — Prithwineel Paul *et al.* (submitted to *Quantum Machine Intelligence*).
 
 The study asks whether a quantum model adds anything on top of a strong classical image backbone for four-class retinal OCT
 classification (Kermany OCT2017: NORMAL, CNV, DME, DRUSEN), when the comparison is controlled: the same frozen features, the
@@ -42,18 +42,18 @@ requirements.txt
 | Table 2 (parameter counts) | B | 02 / Cell 13 | `benchmark_param_counts.csv` |
 | Table 4, Fig. 2 (CV and locked test, seven pre-declared pairs) | B | 02 / Cells 15, 17, 19, 20, 21 | `benchmark_cv_heads.csv`, `benchmark_cv_kernels.csv`, `benchmark_cv_tests.csv`, `benchmark_test_metrics.csv`, `benchmark_test_comparisons.csv`, `benchmark_verdicts.md` |
 | Fig. 3 (data efficiency) | A | 01 / Cell 13 | `data_efficiency.csv` |
-| Fig. 4, Tables S1–S2 (kernel concentration, geometric difference) | B | 02 / Cells 16, 18 | `benchmark_kernel_concentration.csv`, `benchmark_geometric_difference.csv` |
+| Fig. 4, Tables A1–A2 (kernel concentration, geometric difference) | B | 02 / Cells 16, 18 | `benchmark_kernel_concentration.csv`, `benchmark_geometric_difference.csv` |
 | Simulated noise (shots, depolarising; image noise) | A | 01 / Cells 16, 17 | `quantum_noise.csv`, `image_noise_robustness.csv` |
-| Table 5, Fig. 5, Table S4 (IBM hardware, mitigation, job list) | C | 02 / Cells 22–26 | `hw_*.npy`, `hw_info_main.json`, `hw_results.csv`, `hw_summary.json`, `hw_mitigation_comparison.csv`, `hw_mitigation_tests.csv` |
+| Table 5, Fig. 5, Table A4 (IBM hardware, mitigation, job list) | C | 02 / Cells 22–26 | `hw_*.npy`, `hw_info_main.json`, `hw_results.csv`, `hw_summary.json`, `hw_mitigation_comparison.csv`, `hw_mitigation_tests.csv` |
 | Table 6 (external validation) | C | 02 / Cells 27, 28 | `external_validation.csv`, `external_validation_tests.csv` |
 | External validation: single-model robustness, per-class F1 (exploratory) | C | 02 / Cell 29 | `external_robustness_single_models.csv`, `external_per_class_f1.csv`, `external_prediction_distribution.csv` |
-| Table S3 (run A locked / official test) | A | 01 / Cell 14 | `final_test_metrics.csv`, `final_test_comparisons.csv` |
+| Table A3 (run A locked / official test) | A | 01 / Cell 14 | `final_test_metrics.csv`, `final_test_comparisons.csv` |
 
-Runs A, B and C each fine-tuned their own backbone on the same partition (paper, Table 3). Run B is
+All runs use the same patient partition (paper, Table 3). Runs B and C each fine-tuned their own backbone; run A
+(notebook 01) was run in run C's results folder, so it reused run C's backbone checkpoint (`reuse_backbone = True`). Run B is
 notebook 02 with `RUN_BENCHMARK = True`; run C is notebook 02 with `RUN_BENCHMARK = False`, `RUN_EXTERNAL = True` and the IBM
-steps. To reproduce them as independent runs, give each run its own results folder (`RESULTS_DIR`). If notebook 02 finds
-`features.npz` from notebook 01 in its results folder, it reuses those features instead of fine-tuning a new backbone, which
-saves about 40 minutes but makes runs A and B share a backbone.
+steps. Notebooks 01 and 02 reuse a backbone checkpoint or `features.npz` found in their results folder; give a run its own
+results folder (`RESULTS_DIR`) to fine-tune an independent backbone instead.
 
 ## Three levels of verification
 
@@ -66,7 +66,8 @@ python scripts/verify_split.py /path/to/OCT2017 --manifest results/run_C/split_m
 # expected: locked-test SHA-256 b735ec67e3e4531ba2b911a0aa3221810d19b4c5aa1f91973c6927540a804961
 
 # CV significance tests, from the saved per-fold results
-python scripts/verify_cv_tests.py --results results/run_B
+python scripts/verify_cv_tests.py --results results/run_A     # notebook 01 (run A)
+python scripts/verify_cv_tests.py --results results/run_C     # notebook 02 (run C replication; run_B once added)
 
 # all hardware numbers, from the raw IBM measurement bits (also re-simulates the circuit in plain numpy)
 python scripts/verify_hardware.py --results results/run_C
